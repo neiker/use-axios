@@ -1,0 +1,48 @@
+{
+  "name": "use-axios",
+  "version": "1.0.0",
+  "description": "React Hooks for Axios",
+  "author": "neiker",
+  "license": "MIT",
+  "repository": "https://github.com/neiker/use-axios",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest -w",
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "prepare": "npm run build",
+    "predeploy": "cd example && npm install && npm run build",
+    "deploy": "gh-pages -d example/build"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0",
+    "axios": "^0.19.0",
+    "lru-cache": "^5.1.0"
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "2.0.3",
+    "@types/axios": "0.14.0",
+    "@types/jest": "24.0.18",
+    "@types/lru-cache": "5.1.0",
+    "@types/react": "16.9.5",
+    "rollup": "1.23.1",
+    "rollup-plugin-babel": "4.3.3",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-json": "4.0.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-peer-deps-external": "2.2.0",
+    "rollup-plugin-typescript2": "0.24.3",
+    "typescript": "3.6.3"
+  },
+  "files": [
+    "dist"
+  ]
+}
